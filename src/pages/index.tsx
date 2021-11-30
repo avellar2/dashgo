@@ -1,13 +1,11 @@
 import {
     Button,
     Flex,
-    FormControl,
-    FormLabel,
-    Input,
     Stack,
 } from "@chakra-ui/react";
+import { Input } from "../components/Form/Input";
 
-export default function Home() {
+export default function SignIn() {
     return (
         <Flex w="100vw" h="100vh" justifyContent="center" alignItems="center">
             <Flex
@@ -21,37 +19,10 @@ export default function Home() {
                 p={8}
             >
                 <Stack spacing={"4"}>
-                    <FormControl>
-                        <FormLabel htmlFor="email">Email</FormLabel>
-                        <Input
-                            focusBorderColor="pink.500"
-                            name="email"
-                            id="email"
-                            type="email"
-                            bgColor={"gray.900"}
-                            variant={"filled"}
-                            _hover={{
-                                bgColor: "gray.900",
-                            }}
-                            size={"lg"}
-                        />
-                    </FormControl>
-
-                    <FormControl>
-                        <FormLabel htmlFor="password">Senha</FormLabel>
-                        <Input
-                            focusBorderColor="pink.500"
-                            name="password"
-                            id="password"
-                            type="password"
-                            bgColor={"gray.900"}
-                            variant={"filled"}
-                            _hover={{
-                                bgColor: "gray.900",
-                            }}
-                            size={"lg"}
-                        />
-                    </FormControl>
+                   
+                   <Input type='email' name='email' label='Email'/> 
+                   <Input type='password' name='password' label='Senha'/> 
+                    
                 </Stack>
 
                 <Button type="submit" size="lg" mt={6} colorScheme={"pink"}>
