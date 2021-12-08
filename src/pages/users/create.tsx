@@ -52,7 +52,8 @@ export default function CreateUser() {
             <Flex w={"100%"} my={"6"} maxWidth={1480} mx="auto" px={"6"}>
                 <Sidebar />
 
-                <Box 
+                <Box
+                    as='form'
                     flex={"1"} 
                     borderRadius={8} 
                     bg={"gray.800"} 
@@ -100,7 +101,7 @@ export default function CreateUser() {
                             />
                             <Input
                                 name="password_confirmation"
-                                type="password_confirmation"
+                                type="password"
                                 label="Confirme sua senha"
                                 error={errors.password_confirmation}
                                 {...register('password_confirmation')} 
